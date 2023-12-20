@@ -1,12 +1,11 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+title: Teaching
+description: I mainly worked as a teaching assistant for statistics in my first year of Ph.D. career.
 nav: true
-nav_order: 5
+nav_order: 3
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
-
-Organize your courses by years, topics, or universities, however you like!
+- [STA2001](https://www.cuhk.edu.cn/en/course/8104): Probability and Statistics I (*Spring 2023*).
+- [STA2003](https://www.cuhk.edu.cn/en/course/8733): Probability (*Fall 2022*).
