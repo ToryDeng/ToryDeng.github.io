@@ -1,5 +1,5 @@
 ---
-layout: redirected
+layout: default
 title: CV (English)
 redirect_to: /assets/pdf/English_Resume.pdf
 nav: true
