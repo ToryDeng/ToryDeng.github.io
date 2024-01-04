@@ -1,6 +1,9 @@
 ---
 layout: default
+permalink: /blog/
 title: blog
+nav: true
+nav_order: 1
 pagination:
   enabled: true
   collection: posts
@@ -95,7 +98,14 @@ pagination:
   {% endif %}
 
   <ul class="post-list">
-    {% for post in paginator.posts %}
+
+    {%- if page.pagination.enabled -%}
+      {%- assign postlist = paginator.posts -%}
+    {%- else -%}
+      {%- assign postlist = site.posts -%}
+    {%- endif -%}
+
+    {% for post in postlist %}
 
     {% if post.external_source == blank %}
       {% assign read_time = post.content | number_of_words | divided_by: 180 | plus: 1 %}
@@ -163,6 +173,8 @@ pagination:
     {% endfor %}
   </ul>
 
-  {% include pagination.html %}
+  {%- if page.pagination.enabled -%}
+    {%- include pagination.html -%}
+  {%- endif -%}
 
 </div>
