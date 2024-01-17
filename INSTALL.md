@@ -2,7 +2,7 @@
 
 The recommended approach for using **al-folio** is to first create your own site using the template with as few changes as possible, and only when it is up and running customize it however you like. This way it is easier to pinpoint what causes a potential issue in case of a bug. The minimum steps required to create your own site are:
 
-1. Create a new repository using this template. For this, click on `Use this template -> Create a new repository` above the file list. If you plan to upload your site to `<your-github-username>.github.io`, note that the name of your repository MUST BE `<your-github-username>.github.io` or `<your-github-orgname>.github.io`, as stated in the [GitHub pages docs](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites).
+1. Create a new repository using this template. For this, click on [Use this template -> Create a new repository](https://github.com/new?template_name=al-folio&template_owner=alshedivat) above the file list. If you plan to upload your site to `<your-github-username>.github.io`, note that the name of your repository MUST BE `<your-github-username>.github.io` or `<your-github-orgname>.github.io`, as stated in the [GitHub pages docs](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites).
 2. In this new repository, go to `Settings -> Actions -> General -> Workflow permissions` and give `Read and write permissions` to GitHub Actions.
 3. Open file `_config.yml`, set `url` to `https://<your-github-username>.github.io` and leave `baseurl` **empty**.
 4. Finally, in the repository page go to `Settings -> Pages -> Build and deployment`, make sure that `Source` is set to `Deploy from a branch` and set the branch to `gh-pages` (NOT to master).
@@ -34,7 +34,7 @@ $ docker compose pull
 $ docker compose up
 ```
 
-Note that when you run it for the first time, it will download a docker image of size 400MB or so. To see the template running, open your browser and go to [http://localhost:8888](http://localhost:8888). You should see a copy of the theme's demo website.
+Note that when you run it for the first time, it will download a docker image of size 400MB or so. To see the template running, open your browser and go to `http://localhost:8888`. You should see a copy of the theme's demo website.
 
 Now, feel free to customize the theme however you like (don't forget to change the name!). After you are done, you can use the same command (`docker compose up`) to render the webpage with all you changes. Also, make sure to commit your final changes.
 
@@ -55,13 +55,13 @@ $ docker compose up --build
 If you want to use a specific docker version, you can do so by changing `latest` tag to `your_version` in `docker-compose.yaml`. For example, you might have created your website on `v0.10.0` and you want to stick with that.
 
 - Beta
-You can also change the docker image tag to slim! It is a slimmed docker image with a size of below 100MBs (same functionality).
+  You can also change the docker image tag to slim! It is a slimmed docker image with a size of below 100MBs (same functionality).
 
 ## Local Setup (Legacy)
 
 For a hands-on walkthrough of running al-folio locally without using Docker, check out [this cool blog post](https://george-gca.github.io/blog/2022/running-local-al-folio/) by one of the community members!
 
-Assuming you have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Bundler](https://bundler.io/) installed on your system (*hint: for ease of managing ruby gems, consider using [rbenv](https://github.com/rbenv/rbenv)*), and also [Python](https://www.python.org/) and [pip](https://pypi.org/project/pip/) (*hint: for ease of managing python packages, consider using a virtual environment, like [venv](https://docs.python.org/pt-br/3/library/venv.html) or [conda](https://docs.conda.io/en/latest/)*).
+Assuming you have [Ruby](https://www.ruby-lang.org/en/downloads/) and [Bundler](https://bundler.io/) installed on your system (_hint: for ease of managing ruby gems, consider using [rbenv](https://github.com/rbenv/rbenv)_), and also [Python](https://www.python.org/) and [pip](https://pypi.org/project/pip/) (_hint: for ease of managing python packages, consider using a virtual environment, like [venv](https://docs.python.org/pt-br/3/library/venv.html) or [conda](https://docs.conda.io/en/latest/)_).
 
 ```bash
 $ bundle install
@@ -70,7 +70,7 @@ $ pip install jupyter
 $ bundle exec jekyll serve --lsi
 ```
 
-To see the template running, open your browser and go to [http://localhost:4000](http://localhost:4000). You should see a copy of the theme's [demo website](https://alshedivat.github.io/al-folio/). Now, feel free to customize the theme however you like. After you are done, remember to **commit** your final changes.
+To see the template running, open your browser and go to `http://localhost:4000`. You should see a copy of the theme's [demo website](https://alshedivat.github.io/al-folio/). Now, feel free to customize the theme however you like. After you are done, remember to **commit** your final changes.
 
 ## Deployment
 
@@ -170,9 +170,9 @@ Then go to Actions -> New workflow -> set up a workflow yourself, setup the foll
 ```yaml
 name: Sync from template
 on:
-    # cronjob trigger
+  # cronjob trigger
   schedule:
-  - cron:  "0 0 1 * *"
+    - cron: "0 0 1 * *"
   # manual trigger
   workflow_dispatch:
 jobs:
@@ -198,7 +198,7 @@ Another option is to manually update your code by following the steps below:
 # Assuming the current directory is <your-repo-name>
 $ git remote add upstream https://github.com/alshedivat/al-folio.git
 $ git fetch upstream
-$ git rebase v0.9.0
+$ git rebase v0.11.0
 ```
 
 If you have extensively customized a previous version, it might be trickier to upgrade.
