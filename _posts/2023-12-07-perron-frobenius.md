@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Perron-Frobenius Theorem
-date: 2023-12-08
+created_date: 2023-12-07
 description: a detailed proof of the PF theorem and an application
 tags: matrix eigenvalue spectral-radius
 categories: mathematics

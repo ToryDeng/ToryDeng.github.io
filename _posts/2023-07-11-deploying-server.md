@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Deploying a Server for Bioinformatics Research
-date: 2023-10-14
+created_date: 2023-07-11
+last_updated_date: 2024-04-14
 description: how to deploy a server for bioinformatics research
 tags: deployment server Ubuntu
 categories: computer
