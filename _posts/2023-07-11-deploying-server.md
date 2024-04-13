@@ -290,7 +290,8 @@ If you are also a user of `pytorch` or `tensorflow` and you have one or more ava
 import torch
 import tensorflow as tf
 
-# check pytorch
+# check pytorch and cuda in use
+print(torch.cuda.version)
 print(torch.cuda.is_available())
 print(torch.cuda.device_count())
 print(torch.cuda.current_device())
@@ -500,7 +501,7 @@ Follow the [official installation guide](https://posit.co/download/rstudio-serve
 As an example, let's install one of the most famous R package in the field of single-cell genomics, [`Seurat`](https://satijalab.org/seurat/index.html). Before the installation, you need to install some system-level dependencies first:
 
 ```bash
-sudo apt install cmake pandoc pandoc-citeproc libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev imagemagick libmagick++-dev libhdf5-dev libgsl-dev libssl-dev
+sudo apt install cmake pandoc pandoc-citeproc libcurl4-openssl-dev libfontconfig1-dev libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev imagemagick libmagick++-dev libhdf5-dev libgsl-dev libssl-dev libblas-dev liblapack-dev
 ```
 
 Then the process of installing `Seurat` should be very smooth:
@@ -548,7 +549,7 @@ The key command is
 rsync -r /path/to/sync/ <username>@<remote_host>:<destination_directory>
 ```
 
-which "pushes" a directory from the system you are logging in to another system.
+which "pushes" all contents in `/path/to/sync/` from the system you are logging in to `<destination_directory>` in the target system.
 
 If you are synchronizing a large file, you may want to monitor the process:
 
@@ -577,6 +578,13 @@ When you run `nvidia-smi`, you may get
 Failed to initialize NVML: Driver/library version mismatch
 ```
 
-[This answer](https://stackoverflow.com/questions/43022843/nvidia-nvml-driver-library-version-mismatch/45319156#45319156) from stackoverflow may help. Briefly you can either reboot or unload the `nvidia` module.
+[This answer](https://stackoverflow.com/questions/43022843/nvidia-nvml-driver-library-version-mismatch/45319156#45319156) from stackoverflow may help. Briefly you can either reboot or unload the `nvidia` module. However, if both the ways can't help, you need to reinstall the nvidia drivers:
+
+```bash
+sudo apt purge nvidia* libnvidia*
+sudo ubuntu-drivers install
+```
+
+and then `sudo reboot` your server.
 
 Now, your server should be well-suited for your bioinformatics research and you know what to do when things go wrong. Enjoy it!
