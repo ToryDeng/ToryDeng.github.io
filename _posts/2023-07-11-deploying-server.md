@@ -625,14 +625,13 @@ even you have installed the latest driver. In this case you can try reinstalling
 sudo apt install --reinstall linux-headers-$(uname -r)
 ```
 
-If you encounter some errors like `cc: error: unrecognized command-line option ‘-ftrivial-auto-var-init=zero’`, you can use `gcc 12` instead of `gcc 11` by 
+If you encounter some errors like `cc: error: unrecognized command-line option ‘-ftrivial-auto-var-init=zero’`, you can use `gcc 12` instead of `gcc 11` by
 
 ```bash
 sudo apt-get install gcc-12
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 12
 ```
 
-After the headers are reinstalled, you need to `sudo reboot` the server. Then `nvidia-smi` should work.
-
+After the headers are reinstalled, you need to `sudo reboot` the server. Then `nvidia-smi` should work now.
 
 Now, your server should be well-suited for your bioinformatics research and you know what to do when things go wrong. Enjoy it!
