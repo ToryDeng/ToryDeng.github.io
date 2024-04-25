@@ -2,7 +2,7 @@
 layout: post
 title: Deploying a Server for Bioinformatics Research
 date: 2023-07-11
-last_updated: 2024-04-14
+last_updated: 2024-04-25
 description: how to deploy a server for bioinformatics research
 tags: deployment server Ubuntu
 categories: computer
@@ -203,7 +203,10 @@ I did not modify the `base` environment and proceeded to create two new environm
 If you wish to delete an environment for any reason, utilize the following command:
 
 ```bash
+# delete with a specified name
 conda remove --name <env_name> --all
+# delete with a specified location
+conda remove --prefix /path/to/directory
 ```
 
 ### Install python packages
@@ -587,5 +590,49 @@ sudo ubuntu-drivers install
 ```
 
 and then `sudo reboot` your server.
+
+### Upgrade Nvidia drivers
+
+You can upgrade the Nvidia driver by these steps:
+
+```bash
+# clean the installed version
+sudo apt purge *nvidia* -y
+sudo apt remove *nvidia* -y
+sudo rm /etc/apt/sources.list.d/cuda*
+sudo apt autoremove -y && sudo apt autoclean -y
+sudo rm -rf /usr/local/cuda*
+
+# find recommended driver versions
+ubuntu-drivers devices  # or sudo apt search nvidia
+
+# install the lastest version (replace `550` with the latest version number)
+sudo apt install libnvidia-common-550-server libnvidia-gl-550-server nvidia-driver-550-server -y
+
+# reboot
+sudo reboot now
+```
+
+After reboot, you can check whether the new driver works by `nvidia-smi` ( although you may be required to also install `nvidia-utils-550-server`). Theoretically the command `nvidia-smi` should work, but you may still get an error message
+
+```text
+NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running.
+```
+
+even you have installed the latest driver. In this case you can try reinstalling kernel headers:
+
+```bash
+sudo apt install --reinstall linux-headers-$(uname -r)
+```
+
+If you encounter some errors like `cc: error: unrecognized command-line option ‘-ftrivial-auto-var-init=zero’`, you can use `gcc 12` instead of `gcc 11` by 
+
+```bash
+sudo apt-get install gcc-12
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 12
+```
+
+After the headers are reinstalled, you need to `sudo reboot` the server. Then `nvidia-smi` should work.
+
 
 Now, your server should be well-suited for your bioinformatics research and you know what to do when things go wrong. Enjoy it!
