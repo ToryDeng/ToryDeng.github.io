@@ -206,7 +206,7 @@ If you wish to delete an environment for any reason, utilize the following comma
 # delete with a specified name
 conda remove --name <env_name> --all
 # delete with a specified location
-conda remove --prefix /path/to/directory
+conda remove --prefix /path/to/directory --all
 ```
 
 ### Install python packages
