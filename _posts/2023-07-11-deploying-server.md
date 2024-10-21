@@ -147,7 +147,7 @@ ssh -T git@github.com
 
 ## Configure the Python environment
 
-### Install Miniforge
+### Install miniforge
 
 Instead of `Anaconda` I decide to use `Miniforge` to manage multiple `Python` environments. It has several advantages over Anaconda:
 
@@ -242,7 +242,7 @@ mamba remove --prefix /path/to/directory --all
 You may want to install `JupyterHub`, which serves Jupyter notebook for multiple users.
 
 ```bash
-mamba install jupyterhub jupyterlab notebook jupyter-lsp-python jupyterlab-lsp
+mamba install jupyterhub jupyterlab notebook jupyter-lsp-python jupyterlab-lsp jupyterlab-git
 ```
 
 I recommend to install the [jupyterlab-lsp](https://github.com/jupyter-lsp/jupyterlab-lsp), a powerful coding assistance for JupyterLab. Another useful plugin is [jupyterlab-execute-time](https://github.com/deshaw/jupyterlab-execute-time), which can display cell timings in JupyterLab. Use the following command to install it:
