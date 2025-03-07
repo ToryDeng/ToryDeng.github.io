@@ -73,7 +73,7 @@ ninja.data = [{
           window.location.href = "/blog/2023/deploying-server/";
         
       },
-    },{id: "news-our-research-on-cofunctional-gene-groups-across-both-cell-types-and-tissue-domains-has-been-accepted-in-genomics-proteomics-amp-amp-bioinformatics-gpb-sparkles-smile",
+    },{id: "news-our-research-on-cofunctional-gene-groups-across-both-cell-types-and-tissue-domains-has-been-accepted-in-gpb-sparkles-smile",
           title: 'Our research on cofunctional gene groups across both cell types and tissue domains...',
           description: "",
           section: "News",},{id: "projects-project-7",
