@@ -51,18 +51,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/assets/pdf/Chinese_Resume.pdf";
           },
-        },{id: "post-a-post-with-image-galleries",
-      
-        title: "a post with image galleries",
-      
-      description: "this is what included image galleries could look like",
-      section: "Posts",
-      handler: () => {
-        
-          window.location.href = "/blog/2024/photo-gallery/";
-        
-      },
-    },{id: "post-the-perron-frobenius-theorem",
+        },{id: "post-the-perron-frobenius-theorem",
       
         title: "The Perron-Frobenius Theorem",
       
@@ -84,12 +73,7 @@ ninja.data = [{
           window.location.href = "/blog/2023/deploying-server/";
         
       },
-    },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
+    },{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
           section: "News",},{id: "news-a-long-announcement-with-details",
