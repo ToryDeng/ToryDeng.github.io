@@ -52,28 +52,28 @@ ninja.data = [{
             window.location.href = "/assets/pdf/Chinese_Resume.pdf";
           },
         },{id: "post-the-perron-frobenius-theorem",
-      
-        title: "The Perron-Frobenius Theorem",
-      
-      description: "a detailed proof of the PF theorem and an application",
-      section: "Posts",
-      handler: () => {
         
-          window.location.href = "/blog/2023/perron-frobenius/";
+          title: "The Perron-Frobenius Theorem",
         
-      },
-    },{id: "post-deploying-a-server-for-bioinformatics-research",
-      
-        title: "Deploying a Server for Bioinformatics Research",
-      
-      description: "how to deploy a server for bioinformatics research",
-      section: "Posts",
-      handler: () => {
+        description: "a detailed proof of the PF theorem and an application",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/perron-frobenius/";
+          
+        },
+      },{id: "post-deploying-a-server-for-bioinformatics-research",
         
-          window.location.href = "/blog/2023/deploying-server/";
+          title: "Deploying a Server for Bioinformatics Research",
         
-      },
-    },{id: "news-our-research-on-cofunctional-gene-groups-across-both-cell-types-and-tissue-domains-has-been-accepted-in-gpb-sparkles-smile",
+        description: "how to deploy a server for bioinformatics research",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/deploying-server/";
+          
+        },
+      },{id: "news-our-research-on-cofunctional-gene-groups-across-both-cell-types-and-tissue-domains-has-been-accepted-in-gpb-sparkles-smile",
           title: 'Our research on cofunctional gene groups across both cell types and tissue domains...',
           description: "",
           section: "News",},{id: "projects-project-7",
