@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/assets/pdf/Chinese_Resume.pdf";
           },
-        },{id: "post-the-perron-frobenius-theorem",
+        },{id: "post-deploying-large-language-models-on-ubuntu-servers",
+        
+          title: "Deploying large language models on Ubuntu servers",
+        
+        description: "how to large language models with ollama and open-webui on Ubuntu servers",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/using-language-models/";
+          
+        },
+      },{id: "post-the-perron-frobenius-theorem",
         
           title: "The Perron-Frobenius Theorem",
         
