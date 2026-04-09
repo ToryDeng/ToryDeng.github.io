@@ -37,32 +37,14 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/teaching/";
           },
-        },{id: "nav-cv-english",
-          title: "CV (English)",
-          description: "",
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Click the PDF icon in the top right corner to view the full CV.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/assets/pdf/English_Resume.pdf";
+            window.location.href = "/cv/";
           },
-        },{id: "nav-cv-chinese",
-          title: "CV (Chinese)",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/assets/pdf/Chinese_Resume.pdf";
-          },
-        },{id: "post-deploying-large-language-models-on-ubuntu-servers",
-        
-          title: "Deploying large language models on Ubuntu servers",
-        
-        description: "how to large language models with ollama and open-webui on Ubuntu servers",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/using-language-models/";
-          
-        },
-      },{id: "post-the-perron-frobenius-theorem",
+        },{id: "post-the-perron-frobenius-theorem",
         
           title: "The Perron-Frobenius Theorem",
         
@@ -103,25 +85,25 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/example_pdf.pdf", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%74%61%6F%64%65%6E%67@%6C%69%6E%6B.%63%75%68%6B.%65%64%75.%63%6E", "_blank");
+          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
         },
       },{
-        id: 'social-github',
-        title: 'GitHub',
+        id: 'social-inspire',
+        title: 'Inspire HEP',
         section: 'Socials',
         handler: () => {
-          window.open("https://github.com/ToryDeng", "_blank");
-        },
-      },{
-        id: 'social-orcid',
-        title: 'ORCID',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://orcid.org/0000-0001-7401-311X", "_blank");
+          window.open("https://inspirehep.net/authors/1010907", "_blank");
         },
       },{
         id: 'social-rss',
@@ -135,7 +117,7 @@ ninja.data = [{
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=0QI92MsAAAAJ", "_blank");
+          window.open("https://scholar.google.com/citations?user=qc6CJjYAAAAJ", "_blank");
         },
       },{
       id: 'light-theme',
