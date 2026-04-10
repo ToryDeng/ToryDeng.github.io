@@ -8,4 +8,3 @@ cv_pdf: https://raw.githubusercontent.com/ToryDeng/MyEnglishCV/master/build/cv.p
 cv_format: rendercv # options: rendercv, jsonresume
 description: Click the PDF icon in the top right corner to view the full CV.
 ---
-

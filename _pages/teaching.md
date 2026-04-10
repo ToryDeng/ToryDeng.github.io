@@ -11,4 +11,3 @@ nav_order: 3
 - [MAT-2041](https://www.cuhk.edu.cn/en/course/8753): Linear Algebra and Applications (_Spring 2025_).
 - [STA-2001](https://www.cuhk.edu.cn/en/course/8104): Probability and Statistics I (_Fall 2024_ and _Spring 2023_).
 - [STA-2001H (previously STA-2003)](https://www.cuhk.edu.cn/en/course/8733): Honours Probability and Statistics I (_Fall 2022_).
-
