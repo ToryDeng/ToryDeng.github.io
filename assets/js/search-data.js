@@ -99,6 +99,13 @@ ninja.data = [{
           window.open("mailto:%74%61%6F%64%65%6E%67@%6C%69%6E%6B.%63%75%68%6B.%65%64%75.%63%6E", "_blank");
         },
       },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/torydeng", "_blank");
+        },
+      },{
         id: 'social-rss',
         title: 'RSS Feed',
         section: 'Socials',
@@ -111,6 +118,13 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://scholar.google.com/citations?user=0QI92MsAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0001-7401-311X", "_blank");
         },
       },{
       id: 'light-theme',
