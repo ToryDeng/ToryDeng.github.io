@@ -2,14 +2,19 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.cuhk.edu.cn/en'>The Chinese University of Hong Kong, Shenzhen</a>, Guangdong, China
+subtitle: >
+  Ph.D. Candidate at the School of Data Science,
+  <a href="https://www.cuhk.edu.cn/en">CUHK-Shenzhen</a>
+  <em>Harnessing statistics and code to decipher the secrets of life.</em>
 
 profile:
   align: left
   image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p><i>Harnessing statistics and code to decipher the secrets of life.</i></p>
+    <p>2001 Longxiang Road</p>
+    <p>Longgang District, Shenzhen</p>
+    <p>Guangdong, China</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
