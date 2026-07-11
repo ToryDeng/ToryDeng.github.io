@@ -5,7 +5,6 @@ permalink: /
 subtitle: >
   Ph.D. Candidate at the School of Data Science,
   <a href="https://www.cuhk.edu.cn/en">CUHK-Shenzhen</a>
-  <em>Harnessing statistics and code to decipher the secrets of life.</em>
 
 profile:
   align: left
