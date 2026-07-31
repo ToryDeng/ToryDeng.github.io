@@ -232,10 +232,14 @@ I did not modify the `base` environment and proceeded to create two new environm
 If you wish to delete an environment for any reason, utilize the following command:
 
 ```bash
-# delete with a specified name
-mamba remove --name <env_name> --all
-# delete with a specified location
-mamba remove --prefix /path/to/directory --all
+# deactivate the target environment first if it is currently active
+mamba deactivate
+# delete an environment by name
+mamba env remove --name <env_name> --yes
+# delete an environment by prefix
+mamba env remove --prefix /path/to/directory --yes
+# verify that the environment has been removed
+mamba env list
 ```
 
 ### Install Python packages
